@@ -9,7 +9,7 @@
 
 Un petit interpréteur fait maison pour simplifier le test de vos scripts CPCDOSC+
 
-## Comment l'utilisé ?
+### Comment l'utilisé ?
 
 Juste appeler le programme et lui donner le chemain vers le script que vous voulez testé
 Voici un petit exemple:
