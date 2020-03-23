@@ -36,7 +36,7 @@ CPCLINE read_lines(char* filename)
     file_size = ftell(fptr);
     fseek(fptr, 0, SEEK_SET);
 
-    buffer = (char*)malloc(file_size * sizeof(char));
+    buffer = (char*)malloc((file_size  + 1 ) * sizeof(char));
 
     if(buffer == NULL) {
         fprintf(stderr, "Memory error");
@@ -46,6 +46,7 @@ CPCLINE read_lines(char* filename)
 
     fread(buffer, sizeof(char), file_size, fptr);
     fclose(fptr);
+    buffer[file_size] = '\0';
 
     line_nbr = count_line(buffer);
     lines = (char**)malloc(sizeof(char*) * line_nbr);
