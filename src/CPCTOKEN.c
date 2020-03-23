@@ -1,12 +1,12 @@
 #include "header/CPCTOKEN.h"
+#include "header/str.h"
 
-#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
 char* showTokens(CPCTOKEN tokens, int start, int stop) {
     char* return_value = calloc(tokens.charCount, sizeof(char));
-    strcpy(return_value, tokens.content[start]);
+    strcpy(return_value, strFormat(tokens.content[start]));
 
     if(stop < 0) {
         stop += tokens.length;
@@ -17,7 +17,7 @@ char* showTokens(CPCTOKEN tokens, int start, int stop) {
         if(i == stop)
             break;
 
-        strcat(return_value, tokens.content[i]);
+        strcat(return_value, strFormat(tokens.content[i]));
     }
 
     return return_value;
@@ -50,4 +50,8 @@ CPCTOKEN tokenize(char* line) {
     return_value.content = tokens;
 
     return return_value;
+}
+
+void destroy_CPCTOKEN(CPCTOKEN* token) {
+    free(token->content);
 }

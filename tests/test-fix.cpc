@@ -1,0 +1,7 @@
+REM/ Test pour la déclaration des variables
+
+FIX/ prenom = Bob
+FIX/ prenom2= Alice
+FIX/ prenom3=Carol
+
+TXT/ %prenom% & %prenom2% N'oublions pas aussi %prenom3%

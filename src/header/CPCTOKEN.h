@@ -9,5 +9,6 @@ typedef struct CPCTOKEN {
 
 CPCTOKEN tokenize(char* line);
 char* showTokens(CPCTOKEN tokens, int start, int stop);
+void destroy_CPCTOKEN(CPCTOKEN* tokens);
 
 #endif
