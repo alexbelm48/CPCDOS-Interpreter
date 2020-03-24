@@ -1,5 +1,5 @@
-#include <ci/parser.h>
-#include <ci/CPCLINE.h>
+#include <ci/cpc/parser.h>
+#include <ci/cpc/CPCLINE.h>
 
 #include <stdio.h>
 #include <stdlib.h>
