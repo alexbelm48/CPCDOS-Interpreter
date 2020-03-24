@@ -25,6 +25,6 @@ Usage: `cpc script` in a console terminal
 CC+ is a programming language dedicated to distribution programming with the help of the CPCDOS project.
 
 Here is a list of revelant links for more details:
-- [CPCDOS's official website (in french)](https://cpcdos.net)
-- [CPCDOS's official Discord server (in french)](https://discord.gg/tMA8FeS)
+- [CPCDOS' official website (in french)](https://cpcdos.net)
+- [CPCDOS' official Discord server (in french)](https://discord.gg/tMA8FeS)
 
