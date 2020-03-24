@@ -1,4 +1,4 @@
-#include "header/CPCVAR.h"
+#include <ci/CPCVAR.h>
 
 #include <stdlib.h>
 #include <stdio.h>

@@ -1,9 +1,9 @@
+#include <ci/parser.h>
+#include <ci/CPCLINE.h>
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
-#include "header/parser.h"
-#include "header/CPCLINE.h"
 
 int count_line(char* buffer) {
     int line_nbr = 0;

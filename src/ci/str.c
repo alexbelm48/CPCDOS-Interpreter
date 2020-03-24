@@ -1,8 +1,8 @@
+#include <ci/str.h>
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-
-#include "header/str.h"
 
 char* strLower(char* str) {
     char* return_value = calloc(strlen(str), sizeof(char*));

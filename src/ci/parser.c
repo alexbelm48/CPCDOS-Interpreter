@@ -4,10 +4,10 @@
 #define CLEAR "cls"
 #endif
 
-#include "header/parser.h"
-#include "header/str.h"
-#include "header/CPCTOKEN.h"
-#include "header/CPCVAR.h"
+#include <ci/parser.h>
+#include <ci/str.h>
+#include <ci/CPCTOKEN.h>
+#include <ci/CPCVAR.h>
 
 #include <stdio.h>
 #include <stdlib.h>

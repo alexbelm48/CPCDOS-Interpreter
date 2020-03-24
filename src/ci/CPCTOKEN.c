@@ -1,5 +1,5 @@
-#include "header/CPCTOKEN.h"
-#include "header/str.h"
+#include <ci/CPCTOKEN.h>
+#include <ci/str.h>
 
 #include <stdlib.h>
 #include <stdio.h>
