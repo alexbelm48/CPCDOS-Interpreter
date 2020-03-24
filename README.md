@@ -16,10 +16,6 @@ Voici un petit exemple:
 
 ```cpc ./test/output.cpc```
 
-### Comment l'installé ?
-
-Un `sudo make install` fera l'affaire, ce projet n'a aucune dépendance, pratique non ?
-
 ### Mais que le CPCDOSC+ ?
 
 Le CPCDOSC+ est un langage de programmation visant à la création d'un OS grâce au projet CPCDOS. 
