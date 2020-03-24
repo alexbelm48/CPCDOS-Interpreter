@@ -32,16 +32,14 @@ char* strFormat(char* str) {
     }
 
     int index = 0;
-    for(unsigned long i=0; i < strlen(str); i++) {
-        if(str[index] == '\\') {
-           return_value[index] += str[++i];
+    for(int i=0; i < strlen(str); i++) {
+        if(str[i] == '\\') {
+            return_value[index++] += str[++i];
         }
 
         else {
-            return_value[index] += str[i];
+            return_value[index++] += str[i];
         }
-
-        index++;
     }
 
     return return_value;
