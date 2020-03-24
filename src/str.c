@@ -1,10 +1,16 @@
 #include <stdlib.h>
+#include <stdio.h>
 #include <string.h>
 
 #include "header/str.h"
 
 char* strLower(char* str) {
     char* return_value = calloc(strlen(str), sizeof(char*));
+
+    if(return_value == NULL) {
+        printf("Memory Error\n");
+        exit(1);
+    }
 
     for(int i=0; i < strlen(str); i++) {
         if(str[i] > 64 && str[i] < 91) {
@@ -19,6 +25,12 @@ char* strLower(char* str) {
 
 char* strFormat(char* str) {
     char* return_value = calloc(strlen(str), sizeof(char*));
+
+    if(return_value == NULL) {
+        printf("Memory Error\n");
+        exit(1);
+    }
+
     int index = 0;
     for(unsigned long i=0; i < strlen(str); i++) {
         if(str[index] == '\\') {
@@ -37,6 +49,11 @@ char* strFormat(char* str) {
 
 char* removeUselessSpace(char* str) {
     char* return_value = calloc(strlen(str), sizeof(char));
+
+    if(return_value == NULL) {
+        printf("Memory Error\n");
+        exit(1);
+    }
 
     if(str[strlen(str) - 1 ] == ' ') {
         strncpy(return_value, str, strlen(str) - 1);

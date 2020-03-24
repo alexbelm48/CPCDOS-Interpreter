@@ -7,7 +7,19 @@
 void init_CPCVAR(CPCVAR* var) {
     var->length = 0;
     var->keys = malloc(sizeof(char*) * 2048);
+
+    if(var->keys == NULL) {
+        printf("Memory Error\n");
+        exit(1);
+    }
+
     var->values = malloc(sizeof(char*) * 2048);
+
+    if(var->values == NULL) {
+        printf("Memory Error\n");
+        free(var->keys);
+        exit(1);
+    }
 }
 
 void declare_var(CPCVAR* var, char* key, char* value) {
@@ -28,7 +40,7 @@ char* get_var(CPCVAR* var, char* key) {
 
 CPCTOKEN place_var(CPCVAR* var, CPCTOKEN token) {
     CPCTOKEN new_token;
-    char** tokens = malloc(sizeof(char*) * new_token.length);
+    char** tokens = malloc(sizeof(char*) * token.length);
     int length = 0;
     char* tmp;
 

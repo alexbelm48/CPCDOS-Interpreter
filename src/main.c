@@ -39,7 +39,7 @@ CPCLINE read_lines(char* filename)
     buffer = (char*)malloc((file_size  + 1 ) * sizeof(char));
 
     if(buffer == NULL) {
-        fprintf(stderr, "Memory error");
+        printf("Memory error");
         fclose(fptr);
         exit(1);
     }
@@ -50,6 +50,13 @@ CPCLINE read_lines(char* filename)
 
     line_nbr = count_line(buffer);
     lines = (char**)malloc(sizeof(char*) * line_nbr);
+
+    if(lines == NULL) {
+        printf("Memory error\n");
+        fclose(fptr);
+        free(buffer);
+        exit(1);
+    }
 
     tmp = strtok(buffer, "\n");
 
@@ -74,4 +81,6 @@ int main(int argc, char* argv[])
 
     CPCLINE file_lines = read_lines(argv[1]);
     parse(file_lines);
+
+    free(file_lines.content);
 }

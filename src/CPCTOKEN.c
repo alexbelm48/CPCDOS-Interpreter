@@ -2,11 +2,21 @@
 #include "header/str.h"
 
 #include <stdlib.h>
+#include <stdio.h>
 #include <string.h>
 
 char* showTokens(CPCTOKEN tokens, int start, int stop) {
     char* return_value = calloc(tokens.charCount, sizeof(char));
-    strcpy(return_value, strFormat(tokens.content[start]));
+
+    if(return_value == NULL) {
+        printf("Memory Error\n");
+        exit(1);
+    }
+
+    char* format = strFormat(tokens.content[start]);
+    strcpy(return_value, format);
+
+    free(format);
 
     if(stop < 0) {
         stop += tokens.length;
@@ -17,7 +27,10 @@ char* showTokens(CPCTOKEN tokens, int start, int stop) {
         if(i == stop)
             break;
 
-        strcat(return_value, strFormat(tokens.content[i]));
+        format = strFormat(tokens.content[i]);
+        strcat(return_value, format);
+
+        free(format);
     }
 
     return return_value;
@@ -38,6 +51,12 @@ CPCTOKEN tokenize(char* line) {
     CPCTOKEN return_value;
     int length = 0;
     char** tokens = malloc(sizeof(char*) * (nbrSpace(line) + 1));
+
+    if(tokens == NULL) {
+        printf("Memory Error\n");
+        exit(1);
+    }
+
     token = strtok(line, " ");
 
     while(token != NULL) {
