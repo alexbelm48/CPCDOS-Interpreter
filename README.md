@@ -4,21 +4,27 @@
 ![SIZE](https://img.shields.io/github/repo-size/0v3rl0w/CPCDOS-Interpreter)
 ![COMMIT](https://img.shields.io/github/last-commit/0v3rl0w/CPCDOS-Interpreter)
 
-## Infos
-### Mais qu'est que ?
+## Overview
 
-Un petit interpréteur fait maison pour simplifier le test de vos scripts CPCDOSC+
+### Description
 
-### Comment l'utilisé ?
+This project is a small interpreter made for the sake of testing your CC+ scripts
 
-Juste appeler le programme et lui donner le chemain vers le script que vous voulez testé
-Voici un petit exemple:
+### Building the Project
 
-```cpc ./test/output.cpc```
+Run `cmake` in a separate build directory and `make -j<number_of_cores>`.
+The binary will be produced at the root of the build directory that you've chosen.
 
-### Mais que le CPCDOSC+ ?
+### Usage
 
-Le CPCDOSC+ est un langage de programmation visant à la création d'un OS grâce au projet CPCDOS. 
-Pour avoir plus d'info je vous invite à:
-- [Le site web du projet](https://cpcdos.net)
-- [Le Discord la communauté CPCDOS](https://discord.gg/tMA8FeS)
+Usage: `cpc script` in a console terminal
+- where `script` is the relative or absolute path to the script
+
+### More about CC+
+
+CC+ is a programming language dedicated to distribution programming with the help of the CPCDOS project.
+
+Here is a list of revelant links for more details:
+- [CPCDOS's official website (in french)](https://cpcdos.net)
+- [CPCDOS's official Discord server (in french)](https://discord.gg/tMA8FeS)
+
